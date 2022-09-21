@@ -1,6 +1,5 @@
 import express from 'express';
 import bcrypt from 'bcryptjs';
-import cloudinary from '../middeware/cloudinary.js';
 
 const router = express.Router();
 

@@ -65,7 +65,7 @@ router.post('/', async (req, res) => {
 
       if (userExist)
          return res.status(409).json({
-            msg: 'user already exist! Please login to your S-Shop seller account!',
+            msg: 'User already exist! Please login to your S-Shop seller account!',
          });
 
       const uploadResponse = await cloudinary.v2.uploader.upload(brandLogo, {
@@ -121,7 +121,7 @@ router.post('/', async (req, res) => {
          });
       });
    } catch (err) {
-      console.log(err);
+   
       res.status(500).json({ msg: 'An error occured!' });
    }
 });
@@ -205,7 +205,7 @@ router.put('/', auth, async (req, res) => {
          },
       });
    } catch (err) {
-      console.log(err);
+    
       res.status(500).json({ msg: 'An error occured!' });
    }
 });
@@ -282,7 +282,7 @@ router.put('/passwords', auth, async (req, res) => {
          });
       });
    } catch (err) {
-      console.log(err);
+    
       res.status(500).json({ msg: 'An error occured!' });
    }
 });

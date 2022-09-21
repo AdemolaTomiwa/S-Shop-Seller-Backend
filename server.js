@@ -5,6 +5,7 @@ import db from './config/db.js';
 import userRoutes from './routes/userRoutes.js';
 import authRoutes from './routes/authRoutes.js';
 import productRoutes from './routes/productRoutes.js';
+import passwordResetRoutes from './routes/passwordResetRoutes.js';
 
 dotenv.config();
 
@@ -23,6 +24,8 @@ db();
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
-const PORT = process.env.PORT || 5000;
+app.use('/api/password-reset', passwordResetRoutes);
 
-app.listen(PORT, () => console.log(`Server up and running...`));
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => console.log(`Server up and running on port ${PORT}...`));
