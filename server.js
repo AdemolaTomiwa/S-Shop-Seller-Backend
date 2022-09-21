@@ -21,6 +21,11 @@ app.use(express.urlencoded({ extended: true }));
 db();
 
 // API routes
+
+app.get('/', (req, res) => {
+   res.send('APP IS RUNNING');
+});
+
 app.use('/api/auth', authRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/products', productRoutes);
