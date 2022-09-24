@@ -1,9 +1,9 @@
 import cloudinary from 'cloudinary';
 
 cloudinary.config({
-   cloud_name: 'the-tom-media',
-   api_key: '132127441664331',
-   api_secret: '8tJWl2ufppkeWQyzN6Ell71euWk',
+   cloud_name: 'doiegq2ou',
+   api_key: '654695186612352',
+   api_secret: 'hWXoT9nJz4QAToWTYp0vRiQey4g',
 });
 
 export default cloudinary;
